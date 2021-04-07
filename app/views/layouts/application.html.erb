@@ -11,8 +11,47 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= yield %>
+    <div class="notice has-text-centered has-text-warning"><%= notice %></div>
+    <div class="alert has-text-centered has-text-danger-dark"><%= alert %></div>
+    <div class="cont">      
+      <nav class ="nav-bar is-flex is-align-items-center">
+        <a href="#" class="px-5">LOGO</a>
+      </nav>
+
+      <nav class="left-nav has-text-centered">
+        <div class="user is-flex py-5">
+          <%= image_tag ("prinny.jpeg"), class: 'profile-img pr-3' %>
+          <p>Name of the user</p>
+        </div>
+        <div class="status is-flex is-justify-content-space-around">
+          <div class="has-text-centered w-100 py-3">
+            123 <br>
+            Following
+          </div>
+
+          <div class="has-text-centered w-100 py-3 px-2 b-l">
+            456 <br>
+            Followers
+          </div>
+        </div>
+        <div class="left-nav-links is-flex">
+          <%= link_to "Home", '', class: 'py-2 px-1'%>
+          <%= link_to "Profile", '', class: 'py-2 px-1' %>
+        </div>
+      </nav>
+      <section class="suggestion px-4">
+        <div class="suggestion-header is-flex">
+          <p>WHO TO FOLLOW</p>
+        </div>
+        <div class="follow-suggestion is-flex py-5">
+          <%= image_tag ("prinny.jpeg"), class: 'suggestion-img pr-3' %>
+          <div class="follow-info">
+            <p>Name</p>
+            <p>Followed by</p>
+          </div>
+        </div>
+      </section>
+        <%= yield %>
+    </div>
   </body>
 </html>
