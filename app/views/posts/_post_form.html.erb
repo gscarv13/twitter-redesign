@@ -1,0 +1,11 @@
+<div class="post-form-container">
+  <%= simple_form_for(@post) do |f| %>
+  <%= f.error_notification %>
+  <div class="field">
+    <div class="control">
+      <%= f.input :text, label: 'Post something', input_html: { class: "textarea "}, wrapper: false, label_html: { class:"label" }, autofocus: true, required: false %>
+    </div>
+  </div>
+  <%= f.button :submit, class: "button is-info" %>
+  <% end %>
+</div>

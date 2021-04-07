@@ -1,34 +1,29 @@
-<main>
-  <header class="tab">
-    <%= link_to "Posts", '', class: "tab-link is-flex"%>
-  </header>
+<div class="cont">      
+  <%= render 'support/navbar'  %>
+  <%= render 'support/left_navbar' %>
+  <%= render 'support/suggestion' %>
+  <main>
+    <header class="tab">
+      <%= link_to "Posts", '', class: "tab-link is-flex"%>
+    </header>
 
-  <div class="main-wrapper">
-    <div class="post-form-container">
-      <%= simple_form_for(@post) do |f| %>
-      <%= f.error_notification %>
-      <div class="field">
-        <div class="control">
-          <%= f.input :text, label: 'Post something', input_html: { class: "textarea "}, wrapper: false, label_html: { class:"label" }, autofocus: true, required: false %>
+    <div class="main-wrapper">
+      <%= render 'post_form' %>
+
+      <div class="new-posts-container has-background-white mt-5">
+        <div class="new-posts-header">
+          5 NEW POSTS
         </div>
-      </div>
-      <%= f.button :submit, class: "button is-info" %>
-      <% end %>
-    </div>
-
-    <div class="new-posts-container has-background-white mt-5">
-      <div class="new-posts-header">
-        5 NEW POSTS
-      </div>
-      <div class="new-posts-list py-5">
-        <div class="post is-flex">
-          <%= image_tag ("prinny.jpeg"), class: 'profile-img pr-3' %>
-          <div class="post-content">
-            <p>Author</p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, ab ad atque sapiente omnis, ullam.</p>
+        <div class="new-posts-list py-5">
+          <div class="post is-flex">
+            <%= image_tag ("prinny.jpeg"), class: 'profile-img pr-3' %>
+            <div class="post-content">
+              <p>Author</p>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, ab ad atque sapiente omnis, ullam.</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+  </div>
+  </main>
 </div>
-</main>

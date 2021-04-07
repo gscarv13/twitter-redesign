@@ -1,6 +1,10 @@
 @import '_layout';
 @import 'bulma/bulma';
 
+* {
+  box-sizing: border-box;
+}
+
 .left-nav {
   color: #5d7287;
   display: flex;
@@ -25,6 +29,7 @@
   width: 250px;
   background-color: #f5f6f8;
   grid-area: follow;
+  border-left: #e6e7e9 2px solid;
 }
 
 main {
@@ -36,7 +41,7 @@ main {
 .cont {
   width: 100vw;
   display: grid;
-  grid-template-columns: 250px 1fr 1fr 250px;
+  grid-template-columns: 220px 1fr 1fr 270px;
   grid-template-rows: 100px auto auto auto;
   grid-template-areas: 
     "left-nav nav nav nav nav"

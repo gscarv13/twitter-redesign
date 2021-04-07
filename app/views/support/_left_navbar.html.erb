@@ -1,0 +1,21 @@
+<nav class="left-nav has-text-centered">
+  <div class="user is-flex py-5">
+    <%= image_tag ("prinny.jpeg"), class: 'profile-img pr-3' %>
+    <p>Name of the user</p>
+  </div>
+  <div class="status is-flex is-justify-content-space-around">
+    <div class="has-text-centered w-100 py-3">
+      123 <br>
+      Following
+    </div>
+
+    <div class="has-text-centered w-100 py-3 px-2 b-l">
+      456 <br>
+      Followers
+    </div>
+  </div>
+  <div class="left-nav-links is-flex">
+    <%= link_to "Home", '', class: 'py-2 px-1'%>
+    <%= link_to "Profile", '', class: 'py-2 px-1' %>
+  </div>
+</nav>
