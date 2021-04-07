@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :post do
     author { nil }
-    text { "MyText" }
+    text { 'MyText' }
   end
 end
