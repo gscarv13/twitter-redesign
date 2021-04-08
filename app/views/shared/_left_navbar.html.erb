@@ -1,25 +1,25 @@
 <nav class="left-nav has-text-centered">
   <div class="user is-flex py-5">
     <%= image_tag ("prinny.jpeg"), class: 'profile-img pr-3' %>
-    <p>Name of the user</p>
+    <%= current_user.full_name %>
   </div>
   <div class="status is-flex is-justify-content-space-around">
     <div class="has-text-centered w-100 py-3">
-      123 <br>
+      <%= current_user.followed.count %> <br>
       Following
     </div>
 
     <div class="has-text-centered w-100 py-3 px-2 b-l">
-      456 <br>
+      <%= current_user.followers.count %> <br>
       Followers
     </div>
   </div>
   <div class="left-nav-links is-flex">
-    <%= link_to '', class: 'py-2 px-1' do%>
+    <%= link_to root_path, class: 'py-2 px-1' do%>
       <span class="iconify" data-icon="ant-design:home-filled" data-inline="false"></span>
       Home
     <% end %>
-    <%= link_to '', class: 'py-2 px-1' do%>
+    <%= link_to users_show_path(current_user), class: 'py-2 px-1' do%>
       <span class="iconify" data-icon="mdi:penguin" data-inline="false"></span>
       Profile
     <% end %>

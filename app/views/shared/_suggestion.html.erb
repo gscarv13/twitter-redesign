@@ -2,11 +2,17 @@
   <div class="suggestion-header is-flex">
     <p>WHO TO FOLLOW</p>
   </div>
+  <% @to_follow.each do |f| %>
   <div class="follow-suggestion is-flex py-5">
     <%= image_tag ("prinny.jpeg"), class: 'suggestion-img pr-3' %>
     <div class="follow-info">
-      <p>Name</p>
-      <p>Followed by</p>
+      <p>
+        <%= link_to users_show_path(f) do %>
+          <%= f.full_name %>
+        <% end %>
+        </p>
+      <p>Followed by <%= f.followers.first %></p>
     </div>
   </div>
+  <% end %>
 </section>
