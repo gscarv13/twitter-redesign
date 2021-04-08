@@ -15,7 +15,13 @@
     </div>
   </div>
   <div class="left-nav-links is-flex">
-    <%= link_to "Home", '', class: 'py-2 px-1'%>
-    <%= link_to "Profile", '', class: 'py-2 px-1' %>
+    <%= link_to '', class: 'py-2 px-1' do%>
+      <span class="iconify" data-icon="ant-design:home-filled" data-inline="false"></span>
+      Home
+    <% end %>
+    <%= link_to '', class: 'py-2 px-1' do%>
+      <span class="iconify" data-icon="mdi:penguin" data-inline="false"></span>
+      Profile
+    <% end %>
   </div>
 </nav>
