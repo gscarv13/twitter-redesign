@@ -9,19 +9,23 @@
 
     <div class="main-wrapper">
       <div class="new-posts-container has-background-white mt-5">
-        <div class="new-posts-header">
-          5 NEW POSTS
-        </div>
-        <div class="new-posts-list py-5">
-          <div class="post is-flex">
-            <%= image_tag ("prinny.jpeg"), class: 'profile-img pr-3' %>
-            <div class="post-content">
-              <p>Author</p>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, ab ad atque sapiente omnis, ullam.</p>
+          <div class="new-posts-header">
+            NEW POSTS
+          </div>
+          <% @user.posts.each do |post| %>
+          <div class="new-posts-list py-5">
+            <div class="post is-flex">
+              <%= image_tag ("prinny.jpeg"), class: 'profile-img pr-3' %>
+              <div class="post-content">
+                <%= link_to users_show_path(post.author) do %>
+                  <%= post.author.full_name %>
+                <% end %> <br>
+                <%= post.text %>
+              </div>
             </div>
           </div>
+          <% end %>
         </div>
-      </div>
     </div>
   </main>
 </div>
