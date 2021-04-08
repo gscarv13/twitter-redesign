@@ -29,7 +29,7 @@
 
 .suggestion {
   height: 100%;
-  width: 250px;
+  width: 300px;
   background-color: #f5f6f8;
   grid-area: follow;
   border-left: #e6e7e9 2px solid;
@@ -44,7 +44,7 @@ main {
 .cont {
   width: 100vw;
   display: grid;
-  grid-template-columns: 1fr 2fr 2fr 1fr;
+  grid-template-columns: 1.2fr 2fr 2fr 1fr;
   grid-template-rows: 1fr 3fr 3fr 1fr;
   grid-template-areas: 
     "left-nav nav nav nav nav"
@@ -142,4 +142,27 @@ main {
   width: 24px; 
   height: 24px;
   color: #396c97;
+}
+
+.user-header {
+  flex-direction: column;
+}
+
+.show-img {
+  height: 85px;
+  border-radius: 50%;
+}
+
+.user-status {
+  border-top: #e5e6e8 solid 1px;
+  border-bottom: #e5e6e8 solid 1px;
+}
+
+.b-lr {
+  border-left: #e5e6e8 solid 1px;
+  border-right: #e5e6e8 solid 1px;
+}
+
+.b-b {
+  border-bottom: #e5e6e8 solid 1px;
 }

@@ -1,0 +1,27 @@
+<div class="cont">      
+  <%= render 'shared/navbar'  %>
+  <%= render 'shared/left_navbar' %>
+  <%= render 'shared/user_profile' %>
+  <main>
+    <header class="tab">
+      <%= link_to "Posts", '', class: "tab-link is-flex"%>
+    </header>
+
+    <div class="main-wrapper">
+      <div class="new-posts-container has-background-white mt-5">
+        <div class="new-posts-header">
+          5 NEW POSTS
+        </div>
+        <div class="new-posts-list py-5">
+          <div class="post is-flex">
+            <%= image_tag ("prinny.jpeg"), class: 'profile-img pr-3' %>
+            <div class="post-content">
+              <p>Author</p>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, ab ad atque sapiente omnis, ullam.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
