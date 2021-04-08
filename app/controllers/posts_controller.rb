@@ -4,6 +4,7 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all
     @post = Post.new
+    @to_follow = User.all.where.not(followed: current_user)
   end
 
   def create
@@ -11,8 +12,10 @@ class PostsController < ApplicationController
 
     if @post.save
       flash[:notice] = 'Posted!'
-      redirect_to root_path
+    else
+      flash[:notice] = 'Something went wrong, please try again'
     end
+    redirect_to root_path
   end
 
   private
