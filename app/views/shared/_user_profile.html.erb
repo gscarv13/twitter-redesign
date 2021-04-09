@@ -1,7 +1,7 @@
 <section class="suggestion">
   <div class="user-header is-flex">
     <div class="user-links is-flex is-justify-content-center is-align-items-center pt-5">
-      <span class="iconify" data-icon="akar-icons:circle-plus" data-inline="false"></span>
+      <%=  follow_buttons %>
       <%= image_tag ("prinny.jpeg"), class: 'show-img pl-3' %>
     </div>
     <div class="user-details is-flex is-justify-content-center is-align-items-center is-flex-direction-column py-4">
@@ -10,8 +10,8 @@
     </div>
     <div class="user-status is-flex is-justify-content-space-around has-text-centered">
       <div class="py-5 pl-2"> <%= @user.posts.count %> <br> tweets </div>
-      <div class="py-5 b-lr px-4"> <%= @user.followed.count %> <br> following </div>
-      <div class="py-5 pr-4"> <%= @user.followers.count %> <br> followers </div>
+      <div class="py-5 b-lr px-4"> <%= @user.followers.count %> <br> following </div>
+      <div class="py-5 pr-4"> <%= @user.followed.count %> <br> followers </div>
     </div>
   </div>
   <div class="follow-suggestion p-5">
@@ -25,7 +25,9 @@
           <p>Name</p>
           <p>Followed by</p>
         </div>
-         <span class="iconify is-align-self-center ml-3" data-icon="akar-icons:circle-plus" data-inline="false"></span>
+        <%= link_to user_follow_path(@user) do %>
+          <span class="iconify" data-icon="akar-icons:circle-plus" data-inline="false"></span>
+        <% end %>
       </div>
     <% end %>
   </div>

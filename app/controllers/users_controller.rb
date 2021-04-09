@@ -23,7 +23,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @follow = Following.find_by(followed: @user, follower: current_user)
 
-    if @follow.persisted?
+    unless @follow.nil?
       @follow.destroy
       flash[:notice] = 'Not a follower anymore dood!'
     end
