@@ -1,14 +1,10 @@
 <nav class ="nav-bar is-flex is-align-items-center">
-  <a href="#" class="px-5">
-    <span class="iconify has-text-white" data-icon="ri:sword-fill" data-inline="false"></span>
-  </a>
-  <div class="nav-items mr-5 is-flex">
-    <%= link_to edit_user_registration_path do %>
-      <span class="iconify" data-icon="clarity:settings-solid" data-inline="false"></span>
-    <% end %>
+  <%= link_to root_path do %>
+    <span class="iconify has-text-white ml-5" data-icon="ri:sword-fill" data-inline="false"></span>
+  <% end %>
 
-    <%= link_to destroy_user_session_path, method: :delete do %>
-      <span class="iconify" data-icon="codicon:sign-out" data-inline="false"></span>
-    <% end %>
+  <div class="nav-items mr-5 is-flex">
+    <%= nav_edit_button %>
+    <%= nav_sign_out_button %>
   </div>
 </nav>
