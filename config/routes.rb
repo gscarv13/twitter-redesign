@@ -5,5 +5,9 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
   get 'users/:id', to: 'users#show', as: 'users_show'
+
+  get 'follow/:id', to: 'users#follow', as: 'user_follow'
+  get 'unfollow/:id', to: 'users#unfollow', as: 'user_unfollow'
+
   resources :posts
 end
