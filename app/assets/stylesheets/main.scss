@@ -25,6 +25,7 @@
   width: 100%;
   justify-content: space-between;
   grid-area: nav;
+  min-height: 96px;
 }
 
 .suggestion {
@@ -165,4 +166,9 @@ main {
 
 .b-b {
   border-bottom: #e5e6e8 solid 1px;
+}
+
+.cover-img {
+  height: 287px;
+  width: 100%;
 }
