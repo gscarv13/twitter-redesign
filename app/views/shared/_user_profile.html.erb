@@ -1,7 +1,7 @@
 <section class="suggestion">
   <div class="user-header is-flex">
     <div class="user-links is-flex is-justify-content-center is-align-items-center pt-5">
-      <%=  follow_buttons %>
+      <%=  follow_buttons(@user) %>
       <%= image_tag ("prinny.jpeg"), class: 'show-img pl-3' %>
     </div>
     <div class="user-details is-flex is-justify-content-center is-align-items-center is-flex-direction-column py-4">
@@ -22,12 +22,10 @@
       <div class="user-display is-flex py-4">
         <%= image_tag ("prinny.jpeg"), class: 'suggestion-img pr-3' %>
         <div>
-          <p>Name</p>
+          <p><%= f.followed.full_name %></p>
           <p>Followed by</p>
         </div>
-        <%= link_to user_follow_path(@user) do %>
-          <span class="iconify" data-icon="akar-icons:circle-plus" data-inline="false"></span>
-        <% end %>
+        <%= follow_buttons(f.followed) %>
       </div>
     <% end %>
   </div>
