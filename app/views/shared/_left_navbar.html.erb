@@ -5,12 +5,12 @@
   </div>
   <div class="status is-flex is-justify-content-space-around">
     <div class="has-text-centered w-100 py-3">
-      <%= current_user.followed.count %> <br>
+      <%= current_user.followers.size %> <br>
       Following
     </div>
 
     <div class="has-text-centered w-100 py-3 px-2 b-l">
-      <%= current_user.followers.count %> <br>
+      <%= current_user.followed.size %> <br>
       Followers
     </div>
   </div>

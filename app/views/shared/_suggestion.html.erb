@@ -2,7 +2,8 @@
   <div class="suggestion-header is-flex">
     <p>WHO TO FOLLOW</p>
   </div>
-  <% @to_follow.each do |f| %>
+  <% @users.each do |f| %>
+  <% unless @following.include?(f.id) %>
   <div class="follow-suggestion is-flex py-5">
     <%= image_tag ("prinny.jpeg"), class: 'suggestion-img pr-3' %>
     <div class="follow-info">
@@ -10,9 +11,9 @@
         <%= link_to users_show_path(f) do %>
           <%= f.full_name %>
         <% end %>
-        </p>
-      <p>Followed by <%= f.followers.first %></p>
+      </p>
     </div>
   </div>
+  <% end %>
   <% end %>
 </section>
