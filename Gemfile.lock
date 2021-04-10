@@ -95,6 +95,10 @@ GEM
       responders
       warden (~> 1.2.3)
     diff-lcs (1.4.4)
+    dotenv (2.7.6)
+    dotenv-rails (2.7.6)
+      dotenv (= 2.7.6)
+      railties (>= 3.2)
     erubi (1.10.0)
     factory_bot (6.1.0)
       activesupport (>= 5.0.0)
@@ -255,6 +259,7 @@ DEPENDENCIES
   capybara
   database_cleaner
   devise
+  dotenv-rails
   factory_bot_rails (~> 6.1)
   faker (~> 2.17)
   jbuilder (~> 2.7)
