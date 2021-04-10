@@ -18,7 +18,7 @@
     <div class="py-2 b-b">
       FOLLOWED BY
     </div>
-    <% @user.followers.each do |f| %>
+    <% @user.followers.includes(:followed).each do |f| %>
       <div class="user-display is-flex py-4">
         <%= image_tag ("prinny.jpeg"), class: 'suggestion-img pr-3' %>
         <div>
