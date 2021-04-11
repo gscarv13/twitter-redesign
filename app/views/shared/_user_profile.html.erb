@@ -2,7 +2,7 @@
   <div class="user-header is-flex">
     <div class="user-links is-flex is-justify-content-center is-align-items-center pt-5">
       <%=  follow_buttons(@user) %>
-      <%= image_tag ("prinny.jpeg"), class: 'show-img pl-3' %>
+      <%= user_photo(@user, 'show-img ml-3') %>
     </div>
     <div class="user-details is-flex is-justify-content-center is-align-items-center is-flex-direction-column py-4">
       <p><%= @user.full_name %></p>
@@ -20,12 +20,12 @@
     </div>
     <% @user.followers.includes(:followed).each do |f| %>
       <div class="user-display is-flex py-4">
-        <%= image_tag ("prinny.jpeg"), class: 'suggestion-img pr-3' %>
+        <%= user_photo(f.followed) %>
         <div>
-          <p><%= f.followed.full_name %></p>
-          <p>Followed by</p>
+          <%= link_to users_show_path(f.followed), class: 'mx-3' do %>
+            <%= f.followed.full_name %>
+          <% end %>
         </div>
-        <%= follow_buttons(f.followed) %>
       </div>
     <% end %>
   </div>

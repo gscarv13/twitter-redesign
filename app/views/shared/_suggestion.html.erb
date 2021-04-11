@@ -3,17 +3,6 @@
     <p>WHO TO FOLLOW</p>
   </div>
   <% @users.each do |f| %>
-  <% unless @following.include?(f.id) %>
-  <div class="follow-suggestion is-flex py-5">
-    <%= image_tag ("prinny.jpeg"), class: 'suggestion-img pr-3' %>
-    <div class="follow-info">
-      <p>
-        <%= link_to users_show_path(f) do %>
-          <%= f.full_name %>
-        <% end %>
-      </p>
-    </div>
-  </div>
-  <% end %>
+    <% follow_suggestion(@following, f) %>
   <% end %>
 </section>

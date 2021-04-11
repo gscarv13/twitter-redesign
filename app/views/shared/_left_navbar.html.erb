@@ -1,7 +1,7 @@
 <nav class="left-nav has-text-centered">
   <div class="user is-flex py-5">
     <%= user_photo(current_user) %>
-    <%= current_user.full_name %>
+    <%= content_tag :span, current_user.full_name, class: 'mx-3' %>
   </div>
   <div class="status is-flex is-justify-content-space-around">
     <div class="has-text-centered w-100 py-3">
