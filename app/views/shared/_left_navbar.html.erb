@@ -1,6 +1,6 @@
 <nav class="left-nav has-text-centered">
   <div class="user is-flex py-5">
-    <%= image_tag ("prinny.jpeg"), class: 'profile-img pr-3' %>
+    <%= user_photo(current_user) %>
     <%= current_user.full_name %>
   </div>
   <div class="status is-flex is-justify-content-space-around">

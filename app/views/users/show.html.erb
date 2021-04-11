@@ -3,7 +3,7 @@
   <%= render 'shared/left_navbar' %>
   <%= render 'shared/user_profile' %>
   <main>
-    <%= image_tag ("4.jpg"), class: 'cover-img' %>
+    <%= cover_image(@user) %>
     <header class="tab">
       <%= link_to "Posts", '', class: "tab-link is-flex"%>
     </header>
