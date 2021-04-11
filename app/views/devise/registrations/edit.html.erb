@@ -65,10 +65,21 @@
                       label_html: { class: "label" } %>
         </div>
       </div>
-
-
+      <div class="field">
+        <div class="control">
+          <%= f.input :cover_image_cache, as: :hidden, wrapper: false %>
+          <%= f.input :cover_image, as: :file, wrapper: false %>
+        </div>
+      </div>
+      <div class="field">
+        <div class="control">
+          <%= f.input :photo_cache, as: :hidden, wrapper: false %>
+          <%= f.input :photo, as: :file, wrapper: false %>
+        </div>
+      </div>
+  <br>
   <div class="form-actions">
-    <%= f.button :submit, "Update" %>
+    <%= f.button :submit, "Update", class:"button is-info is-medium" %>
   </div>
 <% end %>
 <hr>
