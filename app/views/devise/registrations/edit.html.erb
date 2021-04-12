@@ -1,3 +1,4 @@
+<%= render 'shared/navbar' %>
 <section class="section">
   <div class="container">
     <div class="columns is-centered">
@@ -14,7 +15,8 @@
                       required: false,
                       autofocus: true,
                       input_html: { autocomplete: "full_name", class:"input" },
-                      wrapper: false, 
+                      wrapper: false,
+                      error_html: { class: 'has-text-danger is-size-6' },
                       label_html: { class:"label" } %>
         </div>
       </div>
@@ -23,7 +25,8 @@
           <%= f.input :username,
                       required: false,
                       input_html: { autocomplete: "username", class:"input" },
-                      wrapper: false, 
+                      wrapper: false,
+                      error_html: { class: 'has-text-danger is-size-6' },
                       label_html: { class:"label" } %>
         </div>
       </div>      
@@ -32,7 +35,8 @@
           <%= f.input :email,
                       required: false,
                       input_html: { autocomplete: "email", class:"input" },
-                      wrapper: false, 
+                      wrapper: false,
+                      error_html: { class: 'has-text-danger is-size-6' },
                       label_html: { class:"label" } %>
         </div>
       </div>      
@@ -41,8 +45,10 @@
           <%= f.input :password,
                       required: false,
                       hint: "leave it blank if you don't want to change it",
+                      hint_html: { class: 'has-text-link is-size-6' },
                       input_html: { autocomplete: "new-password", class:"input" },
-                      wrapper: false, 
+                      wrapper: false,
+                      error_html: { class: 'notification is-danger' },
                       label_html: { class:"label" } %>
         </div>
       </div>      
@@ -51,18 +57,9 @@
           <%= f.input :password_confirmation,
                       required: false,
                       input_html: { autocomplete: "new-password", class:"input" },
-                      wrapper: false, 
-                      label_html: { class:"label" } %>
-        </div>
-      </div>
-      <div class="field">
-        <div class="control">
-          <%= f.input :current_password, 
-                      hint: "we need your current password to confirm your changes", 
-                      required: true,
-                      input_html: { class: "input"},
                       wrapper: false,
-                      label_html: { class: "label" } %>
+                      error_html: { class: 'has-text-danger is-size-6' },
+                      label_html: { class:"label" } %>
         </div>
       </div>
       <div class="field">
@@ -75,6 +72,19 @@
         <div class="control">
           <%= f.input :photo_cache, as: :hidden, wrapper: false %>
           <%= f.input :photo, as: :file, wrapper: false %>
+        </div>
+      </div>
+      <div class="field">
+        <div class="control">
+          <%= f.input :current_password, 
+                      hint: "we need your current password to confirm your changes",
+                      hint_html: { class: 'has-text-danger is-size-6' },
+                      error: "Current password can't be blank",
+                      error_html: { class: 'notification is-danger' },
+                      required: true,
+                      input_html: { class: "input"},
+                      wrapper: false,
+                      label_html: { class: "label" } %>
         </div>
       </div>
   <br>

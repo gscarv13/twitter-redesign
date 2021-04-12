@@ -16,7 +16,8 @@
                       required: false,
                       autofocus: true,
                       input_html: { autocomplete: "full_name", class:"input" },
-                      wrapper: false, 
+                      wrapper: false,
+                      error_html: { class: 'has-text-danger is-size-6' },
                       label_html: { class:"label" } %>
         </div>
       </div>
@@ -25,7 +26,8 @@
           <%= f.input :username,
                       required: false,
                       input_html: { autocomplete: "username", class:"input" },
-                      wrapper: false, 
+                      wrapper: false,
+                      error_html: { class: 'has-text-danger is-size-6' },
                       label_html: { class:"label" } %>
         </div>
       </div>      
@@ -34,7 +36,8 @@
           <%= f.input :email,
                       required: false,
                       input_html: { autocomplete: "email", class:"input" },
-                      wrapper: false, 
+                      wrapper: false,
+                      error_html: { class: 'has-text-danger is-size-6' },
                       label_html: { class:"label" } %>
         </div>
       </div>      
@@ -44,7 +47,8 @@
                       required: false,
                       hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
                       input_html: { autocomplete: "new-password", class:"input" },
-                      wrapper: false, 
+                      wrapper: false,
+                      error_html: { class: 'has-text-danger is-size-6' },
                       label_html: { class:"label" } %>
         </div>
       </div>      
@@ -53,7 +57,8 @@
           <%= f.input :password_confirmation,
                       required: false,
                       input_html: { autocomplete: "new-password", class:"input" },
-                      wrapper: false, 
+                      wrapper: false,
+                      error_html: { class: 'has-text-danger is-size-6' },
                       label_html: { class:"label" } %>
         </div>
       </div>
