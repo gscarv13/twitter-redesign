@@ -18,12 +18,12 @@
     <div class="py-2 b-b">
       FOLLOWED BY
     </div>
-    <% @user.followers.includes(:followed).each do |f| %>
+    <% @user.followed.includes(:follower).each do |f| %>
       <div class="user-display is-flex py-4">
-        <%= user_photo(f.followed) %>
+        <%= user_photo(f.follower) %>
         <div>
-          <%= link_to users_show_path(f.followed), class: 'mx-3' do %>
-            <%= f.followed.full_name %>
+          <%= link_to users_show_path(f.follower), class: 'mx-3' do %>
+            <%= f.follower.full_name %>
           <% end %>
         </div>
       </div>
