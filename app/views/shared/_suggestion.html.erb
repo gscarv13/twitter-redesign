@@ -3,6 +3,6 @@
     <p>WHO TO FOLLOW</p>
   </div>
   <% @users.each do |f| %>
-    <% follow_suggestion(@following, f) %>
+    <%= follow_suggestion(@following, f) %>
   <% end %>
 </section>

@@ -36,9 +36,9 @@ module UsersHelper
     unless following_list.include?(user.id)
       output = "<div class='follow-suggestion is-flex py-5'>"
       output << user_photo(user)
-      output << "div class='follow-info'>"
-      output << "<p> <a class='mx-3' href='#{users_show_path(user)}'> #{user.full_name} </a></p></div></div>"
+      output << "<div class='follow-info'>"
+      output << "<p><a class='mx-3' href='#{users_show_path(user)}'> #{user.full_name} </a></p></div></div>"
     end
-    output
+    output.html_safe
   end
 end
