@@ -151,6 +151,8 @@ main {
 
 .show-img {
   height: 85px;
+  width: 85px;
+  object-fit: cover;
   border-radius: 50%;
 }
 
@@ -172,4 +174,8 @@ main {
   height: 287px;
   width: 100%;
   object-fit: cover;
+}
+
+.error {
+  display: block;
 }
