@@ -16,12 +16,14 @@
           <% @posts.each do |post| %>
           <div class="new-posts-list py-5">
             <div class="post is-flex">
-              <%= image_tag ("prinny.jpeg"), class: 'profile-img pr-3' %>
+              <%= user_photo(post.author) %>
               <div class="post-content">
-                <%= link_to users_show_path(post.author) do %>
+                <%= link_to users_show_path(post.author), class: 'mx-3' do %>
                   <%= post.author.full_name %>
                 <% end %> <br>
-                <%= post.text %>
+                <%= content_tag :paragraph, class: 'mx-3' do %>
+                  <%= post.text %>
+                <% end %>
               </div>
             </div>
           </div>
