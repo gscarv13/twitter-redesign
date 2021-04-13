@@ -3,7 +3,7 @@ class PostsController < ApplicationController
 
   def index
     @user = User.where(id: current_user).includes(:followers, :followed)
-    @posts = Post.all.order('created_at ASC').limit(5).includes(:author)
+    @posts = Post.all.order('created_at DESC').includes(:author)
     @post = Post.new
     @following = current_user.followers.pluck(:followed_id)
     @users = User.all.where.not(id: current_user)
