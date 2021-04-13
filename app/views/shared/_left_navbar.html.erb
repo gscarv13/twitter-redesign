@@ -4,12 +4,12 @@
     <%= content_tag :span, current_user.full_name, class: 'mx-3' %>
   </div>
   <div class="status is-flex is-justify-content-space-around">
-    <div class="has-text-centered w-100 py-3">
+    <div class="has-text-centered w-100 py-3" id="user-following">
       <%= current_user.followers.size %> <br>
       Following
     </div>
 
-    <div class="has-text-centered w-100 py-3 px-2 b-l">
+    <div class="has-text-centered w-100 py-3 px-2 b-l" id="user-followers">
       <%= current_user.followed.size %> <br>
       Followers
     </div>

@@ -1,13 +1,13 @@
 module UsersHelper
   def follow_buttons(user)
     if current_user.followers.pluck(:followed_id).include?(user.id)
-      link_to user_unfollow_path(user) do
+      link_to user_unfollow_path(user), class: 'mx-3', id: 'unfollow' do
         '<span class="iconify mx-3" data-icon="ic:outline-cancel" data-inline="false"></span>'.html_safe
       end
     elsif user == current_user
       nil
     else
-      link_to user_follow_path(user), class: 'mx-3' do
+      link_to user_follow_path(user), class: 'mx-3', id: 'follow' do
         '<span class="iconify" data-icon="akar-icons:circle-plus" data-inline="false"></span>'.html_safe
       end
     end
