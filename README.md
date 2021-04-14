@@ -8,6 +8,7 @@
 
 - Ruby 3
 - Ruby on Rails 6
+- PostgreSQL
 - Cloudinary API
 - Devise
 - Shoulda Matchers
@@ -15,7 +16,8 @@
 - Rspec
 
 ## Live version
-[link](http://nwtwitter.herokuapp.com/)
+
+You can check the live version in [this link](http://nwtwitter.herokuapp.com/)
 
 ## Getting Started
 
@@ -25,13 +27,16 @@ To get a local copy up and running follow these simple example steps.
 
 - Ruby on Rails v 6.x. For more information on how to install Ruby on Rails, please follow this [link](https://guides.rubyonrails.org/getting_started.html)
 
+- Make sure you have PostgreSQL installed on your machine. For more information on how to set it up please follow [this tutorial](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-18-04)
+
 ### Setup and Install
 
 - Clone this repository using the link above (click on the 'code' button)
 - Open a terminal and `cd` to the cloned repository
 - Run `bundle install` to install ruby gems required the dependencies
 - Run `yarn` to install javascript required the dependencies
-- Run `bin/rails DB:migrate` to migrate the database
+- Run `bin/rails db:create` to create database
+- Run `bin/rails db:migrate` to migrate the database
 
 ### Usage
 
