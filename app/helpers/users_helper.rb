@@ -39,7 +39,7 @@ module UsersHelper
       output = "<div class='follow-suggestion is-flex py-5'>"
       output << user_photo(user)
       output << "<div class='follow-info'>"
-      output << "<p><a class='mx-3' href='#{users_show_path(user)}'> #{user.full_name} </a></p></div></div>"
+      output << "<p><a class='mx-3' href='#{user_path(user)}'> #{user.full_name} </a></p></div></div>"
     end
     output.html_safe
   end

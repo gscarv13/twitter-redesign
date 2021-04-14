@@ -16,7 +16,7 @@ class UsersController < ApplicationController
       flash[:alert] = 'Something went wrong... dood'
     end
 
-    redirect_to users_show_path(@user)
+    redirect_to user_path(@user)
   end
 
   def unfollow
@@ -28,6 +28,6 @@ class UsersController < ApplicationController
       flash[:notice] = 'Not a follower anymore dood!'
     end
 
-    redirect_to users_show_path(@user)
+    redirect_to user_path(@user)
   end
 end

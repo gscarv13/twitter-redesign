@@ -22,7 +22,7 @@
       <div class="user-display is-flex py-4">
         <%= user_photo(f.follower) %>
         <div>
-          <%= link_to users_show_path(f.follower), class: 'mx-3' do %>
+          <%= link_to user_path(f.follower), class: 'mx-3' do %>
             <%= f.follower.full_name %>
           <% end %>
         </div>

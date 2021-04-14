@@ -18,7 +18,7 @@
             <div class="post is-flex">
               <%= user_photo(post.author) %>
               <div class="post-content">
-                <%= link_to users_show_path(post.author), class: 'mx-3' do %>
+                <%= link_to user_path(post.author), class: 'mx-3' do %>
                   <%= post.author.full_name %>
                 <% end %> <br>
                 <%= content_tag :paragraph, class: 'mx-3' do %>
