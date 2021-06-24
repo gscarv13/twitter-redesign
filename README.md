@@ -1,6 +1,6 @@
 # NW Twitter
 
-> A social media MVP built on Rails based on twitter redesign UI proposed by [Gregoire Vella](https://www.behance.net/gallery/14286087/Twitter-Redesign-of-UI-details) on Behence
+> This website is a social media MVP project built on Ruby on Rails and PostgreSQL based on Twitter UI redesign proposed by [Gregoire Vella](https://www.behance.net/gallery/14286087/Twitter-Redesign-of-UI-details) on Behence. Live demo available on Heroku.
 
 ![](image/smartmockups_knga0jvw.png)
 
