@@ -59,7 +59,7 @@ To run the tests, move to the root folder of the project and enter the following
 
 - GitHub: [@gscarv13](https://github.com/gscarv13)
 - Twitter: [@Gscarv13](https://twitter.com/Gscarv13)
-- LinkedIn: [Gustavo Carvalho](www.linkedin.com/in/gscarv13)
+- LinkedIn: [Gustavo Carvalho](https://www.linkedin.com/in/gscarv13)
 
 ## 🤝 Contributing
 
