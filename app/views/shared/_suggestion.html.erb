@@ -1,0 +1,8 @@
+<section class="suggestion px-4">
+  <div class="suggestion-header is-flex">
+    <p>WHO TO FOLLOW</p>
+  </div>
+  <% @users.each do |f| %>
+    <%= follow_suggestion(@following, f) %>
+  <% end %>
+</section>

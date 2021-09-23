@@ -1,0 +1,27 @@
+<nav class="left-nav has-text-centered">
+  <div class="user is-flex py-5">
+    <%= user_photo(current_user) %>
+    <%= content_tag :span, current_user.full_name, class: 'mx-3' %>
+  </div>
+  <div class="status is-flex is-justify-content-space-around">
+    <div class="has-text-centered w-100 py-3" id="user-following">
+      <%= current_user.followers.size %> <br>
+      Following
+    </div>
+
+    <div class="has-text-centered w-100 py-3 px-2 b-l" id="user-followers">
+      <%= current_user.followed.size %> <br>
+      Followers
+    </div>
+  </div>
+  <div class="left-nav-links is-flex">
+    <%= link_to root_path, class: 'py-2 px-1' do%>
+      <span class="iconify" data-icon="ant-design:home-filled" data-inline="false"></span>
+      Home
+    <% end %>
+    <%= link_to user_path(current_user), class: 'py-2 px-1' do%>
+      <span class="iconify" data-icon="mdi:penguin" data-inline="false"></span>
+      Profile
+    <% end %>
+  </div>
+</nav>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TwitterRedesign</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="notice has-text-centered has-text-info has-background-info-light"><%= notice %></div>
+    <div class="alert has-text-centered has-text-danger-dark has-background-danger-light"><%= alert %></div>
+    <%= yield %>
+  </body>
+</html>
